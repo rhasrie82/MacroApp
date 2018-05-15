@@ -1,2 +1,2 @@
 # MacroApp
-An App that educates individuals on what Macros are and helps them in accomplishing their fitess goalsssss.
+An App that educates individuals on what Macros are and helps them in accomplishing their fitess goals.
