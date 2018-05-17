@@ -39,7 +39,7 @@ class Foods extends Component {
   };
 
   deleteFood = id => {
-    API.deleteBook(id)
+    API.deleteFood(id)
       .then(res => this.loadFoods())
       .catch(err => console.log(err));
   };
