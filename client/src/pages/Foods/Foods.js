@@ -9,13 +9,13 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Foods extends Component {
   state = {
-    books: [],
-    title:"",
-    author:"",
+    foods: [],
+    week:"",
+    day:"",
     carbs:"",
     proteins:"",
     fats:"",
-    synopsis:""
+    journal:""
     
   };
 
@@ -23,17 +23,17 @@ class Foods extends Component {
     this.loadFoods();
   }
 
-  loadBooks = () => {
+  loadFoods = () => {
     API.getFoods()
       .then(res =>
         this.setState({ 
-          books: res.data, 
-          title:"", 
-          author:"", 
+          foods: res.data, 
+          week:"", 
+          day:"", 
           carbs:"",
           proteins:"",
           fats:"",
-          synopsis:"" })
+          journal:"" })
       )
       .catch(err => console.log(err));
   };
@@ -54,13 +54,13 @@ class Foods extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.week && this.state.day) {
-      API.saveBook({
-        title: this.state.week,
-        author: this.state.day,
+      API.saveFood({
+        week: this.state.week,
+        day: this.state.day,
         carbs: this.state.carbs,
         proteins: this.state.proteins,
         fats: this.state.fats,
-        synopsis: this.state.journal
+        journal: this.state.journal
       })
         .then(res => this.loadFoods())
         .catch(err => console.log(err));
@@ -77,7 +77,7 @@ class Foods extends Component {
             </Jumbotron>
             <form>
               <Input
-                value={this.state.title}
+                value={this.state.week}
                 onChange={this.handleInputChange}
                 name="week"
                 placeholder="Week (required)"
@@ -107,7 +107,7 @@ class Foods extends Component {
                 placeholder="Fats (required)"
               />
               <TextArea
-                value={this.state.synopsis}
+                value={this.state.journal}
                 onChange={this.handleInputChange}
                 name="journal"
                 placeholder="Food Journal (required)"
@@ -128,7 +128,7 @@ class Foods extends Component {
             {this.state.foods.length ? (
               <List>
                 {this.state.foods.map(food => (
-                  <ListItem key={book._id}>
+                  <ListItem key={food._id}>
                     <Link to={"/foods/" + food._id}>
                       <strong>
                         {food.week} - {food.day}

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 mongoose.Promise = global.Promise;
 
-// This file empties the Books collection and inserts the books below
+// This file empties the Foods collection and inserts the books below
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
@@ -106,7 +106,7 @@ const foodSeed = [
 
 db.food
   .remove({})
-  .then(() => db.Book.collection.insertMany(foodSeed))
+  .then(() => db.Food.collection.insertMany(foodSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
     process.exit(0);
