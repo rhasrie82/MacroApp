@@ -69,17 +69,15 @@ class Foods extends Component {
 
   render() {
     return (
-      <div style={{'background': "url() no-repeat center center fixed",
+      <div style={{'background': "url(https://www.bing.com/th?id=OIP.8oe2dNxTUvzUEO_dB1x2EwHaFX&w=293&h=204&c=7&o=5&dpr=2&pid=1.7) no-repeat center center fixed",
       "-webkit-background-size": "cover",
       "-moz-background-size": "cover",
      "-o-background-size": "cover",
-      "background-size": "cover", "height": "100vh"}}>
+      "background-size": "cover", "height": "100%"}}>
       <Container>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
-              <h1>Daily Food Intake</h1>
-            </Jumbotron>
+            <h1>Daily Food Intake</h1>
             <form>
               <Input
                 value={this.state.week}
@@ -127,9 +125,7 @@ class Foods extends Component {
             </form>
           </Col>
           <Col size="md-6 sm-12">
-            <Jumbotron>
               <h1>Food Log</h1>
-            </Jumbotron>
             {this.state.foods.length ? (
               <List>
                 {this.state.foods.map(food => (

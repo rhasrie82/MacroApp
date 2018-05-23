@@ -26,11 +26,9 @@ class Detail extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <Jumbotron>
               <h1>
                 {this.state.food.week} - {this.state.food.day}
               </h1>
-            </Jumbotron>
           </Col>
         </Row>
         <Row>
