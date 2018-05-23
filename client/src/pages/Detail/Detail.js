@@ -18,6 +18,11 @@ class Detail extends Component {
 
   render() {
     return (
+      <div style={{'background': "url(https://www.ten.co.uk/wp-content/uploads/2015/02/phy19-what-london-joggers-can-learn-from-the-ultramarathon-runners.jpg) no-repeat center center fixed",
+      "-webkit-background-size": "cover",
+      "-moz-background-size": "cover",
+     "-o-background-size": "cover",
+      "background-size": "cover", "height": "100vh"}}>
       <Container fluid>
         <Row>
           <Col size="md-12">
@@ -49,6 +54,7 @@ class Detail extends Component {
           </Col>
         </Row>
       </Container>
+      </div>
     );
   }
 }

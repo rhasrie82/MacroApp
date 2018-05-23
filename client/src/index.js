@@ -8,4 +8,4 @@ import 'bootstrap/dist/css/bootstrap.css';
 // Add our style
 import './components/ToDo/assets/style/index.css';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App/>, document.getElementById("root"));

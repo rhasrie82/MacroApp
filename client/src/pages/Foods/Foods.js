@@ -69,7 +69,12 @@ class Foods extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <div style={{'background': "url() no-repeat center center fixed",
+      "-webkit-background-size": "cover",
+      "-moz-background-size": "cover",
+     "-o-background-size": "cover",
+      "background-size": "cover", "height": "100vh"}}>
+      <Container>
         <Row>
           <Col size="md-6">
             <Jumbotron>
@@ -144,6 +149,7 @@ class Foods extends Component {
           </Col>
         </Row>
       </Container>
+      </div>
     );
   }
 }
