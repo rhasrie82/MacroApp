@@ -5,8 +5,7 @@ The MacroApp Application uses React.  The purpose of MacroApp is to educates ind
 
 This application demonstrates a full stack application with a front end implemented with HTML/CSS and elements and the backend implemented with React. 
 
-The user may enter any burger name to add it to the menu. This also adds the new burger entry into the MySQL database. The initial burger entry is added as *available* on the menu and placed on the left side of the screen. The user may then eat any burger by clicking on it, which moves it into the adjacent column and updates its status accordingly in the database.
-
+The user may enter their Food Intake info. This also adds the info to the Mongo database. The user can view their info at a later time to track their eating habits. There is also an additional option to make a shopping list so the user doesn't over shop.
 ## Demo
 
 The demo of MacroApp can be found [here]().
@@ -15,18 +14,19 @@ The demo of MacroApp can be found [here]().
 
 To run the application locally, first clone this repository with the following command.
 
-	git clone https://github.com/zschneid85/Burger1985.git
+	git clone 
 	
 Next, install the application dependencies.
 
-	cd Burger1985
-	npm install
+	cd MacroApp
+	yarn install
 	
-Finally, run the node server locally.
+	
+Finally, run the mongo server locally.
 
-	node server
+	run mongod in terminal
 	
 Now, open the local application on port 3000 at the URL: `http://localhost:3000/`.
 
-**Enjoy and have a burger!**
+**Enjoy achieving your fitness goals!**
 
