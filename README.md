@@ -3,7 +3,7 @@ The MacroApp Application uses React.  The purpose of MacroApp is to educates ind
 
 ## Description
 
-This application demonstrates a full stack application with a front end implemented with HTML/CSS and elements and the backend implemented with React. 
+This application demonstrates a full stack application implemented with HTML/CSS,React Js,Mongo DB,JSX,SCSS Files,Webfontloader, and Mongoose.
 
 The user may enter their Food Intake info. This also adds the info to the Mongo database. The user can view their info at a later time to track their eating habits. There is also an additional option to make a shopping list so the user doesn't over shop.
 ## Demo
